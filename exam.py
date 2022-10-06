@@ -136,7 +136,7 @@ def validate_transfer_user(sender):
     while validation is False:
         for user, data in users.items():
             #ensures recipient is user and is not sender user
-            if recipient == data['username'] and recipient != users[sender]['username']: 
+            if recipient == data['username'] and recipient != users[sender]['username']:
                 recipient = user
                 validation = True
                 transfer_funds(recipient, sender) #sends on to function handling transfer
